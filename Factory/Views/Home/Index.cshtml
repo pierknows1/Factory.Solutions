@@ -1,35 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+  Layout = "_Layout";
 }
+<body> 
 
-@using Factory.Models
+<div class="container"> 
 
-<h1>Welcome</h1>
+<h1>Welcome !!</h1>
 
-<h3>List of Engineers</h3>
+</div>
 
-@if(Model["Engineers"].Length == 0)
-{
-    <p>No Engineer has been added</p>
-}
-<ul>
+<div class="container">
+@Html.ActionLink("See all Engineers", "Index", "Engineers", null, new { @class = "custom-button" })
 
-    @foreach (Engineer engineer in Model["Engineers"])
-    {
-        <li id="engineer">@Html.ActionLink(@engineer.EngineerName, "Details", "Engineers", new { id = @engineer.EngineerId})</li>
-    }
-</ul>
+@Html.ActionLink("See all Machines", "Index", "Machines", null, new { @class = "custom-button" })
 
-<h3>List of Machines</h3>
 
-@if(Model["Machines"].Length == 0)
-{
-    <p>No Machine has been added</p>
-}
-<ul>
+</div>
 
-    @foreach (Machine machine in Model["Machines"])
-    {
-        <li id="machine">@Html.ActionLink(@machine.MachineName, "Details", "Machines", new { id = @machine.MachineId})</li>
-    }
-</ul>
+</body>

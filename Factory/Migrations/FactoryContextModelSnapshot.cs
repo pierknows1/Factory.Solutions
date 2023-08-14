@@ -24,10 +24,8 @@ namespace Factory.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("EngineerDetails")
-                        .HasColumnType("longtext");
-
                     b.Property<string>("EngineerName")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("MachineId")
@@ -35,10 +33,28 @@ namespace Factory.Migrations
 
                     b.HasKey("EngineerId");
 
-                    b.HasIndex("MachineId")
-                        .IsUnique();
-
                     b.ToTable("Engineers");
+                });
+
+            modelBuilder.Entity("Factory.Models.EngineerMachine", b =>
+                {
+                    b.Property<int>("EngineerMachineId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("EngineerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EngineerMachineId");
+
+                    b.HasIndex("EngineerId");
+
+                    b.HasIndex("MachineId");
+
+                    b.ToTable("EngineerMachines");
                 });
 
             modelBuilder.Entity("Factory.Models.Machine", b =>
@@ -47,10 +63,13 @@ namespace Factory.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("MachineDescription")
+                    b.Property<int>("EngineerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MachineName")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("MachineType")
+                    b.Property<string>("ManufactureDate")
                         .HasColumnType("longtext");
 
                     b.HasKey("MachineId");
@@ -58,20 +77,33 @@ namespace Factory.Migrations
                     b.ToTable("Machines");
                 });
 
-            modelBuilder.Entity("Factory.Models.Engineer", b =>
+            modelBuilder.Entity("Factory.Models.EngineerMachine", b =>
                 {
-                    b.HasOne("Factory.Models.Machine", "Machine")
-                        .WithOne("Engineer")
-                        .HasForeignKey("Factory.Models.Engineer", "MachineId")
+                    b.HasOne("Factory.Models.Engineer", "Engineer")
+                        .WithMany("JoinEntities")
+                        .HasForeignKey("EngineerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Factory.Models.Machine", "Machine")
+                        .WithMany("JoinEntities")
+                        .HasForeignKey("MachineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Engineer");
 
                     b.Navigation("Machine");
                 });
 
+            modelBuilder.Entity("Factory.Models.Engineer", b =>
+                {
+                    b.Navigation("JoinEntities");
+                });
+
             modelBuilder.Entity("Factory.Models.Machine", b =>
                 {
-                    b.Navigation("Engineer");
+                    b.Navigation("JoinEntities");
                 });
 #pragma warning restore 612, 618
         }

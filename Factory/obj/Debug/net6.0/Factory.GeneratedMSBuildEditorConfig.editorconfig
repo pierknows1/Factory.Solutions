@@ -15,8 +15,56 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/user/Desktop/Factory/Factory
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/AddMachine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0FkZE1hY2hpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Engineers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5naW5lZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/user/Desktop/Factory/Factory/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/AddEngineer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvQWRkRW5naW5lZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/Desktop/Factory/Factory/Views/Machines/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFjaGluZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/user/Desktop/Factory/Factory/Views/Shared/_Layout.cshtml]

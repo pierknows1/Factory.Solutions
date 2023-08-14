@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<p>@Html.ValidationMessageFor(model => model.EngineerName, "Name")</p>
+
+<h4>Add new Engineer</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.EngineerName, "Name")
+  @Html.TextBoxFor(model => model.EngineerName)
+  <br>
+
+  <input type="submit" value="Add"  class="btn btn-primary"/>
+}
+
+<p> @Html.ActionLink("Back to List", "Index" )</p>

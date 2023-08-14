@@ -1,0 +1,31 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+    <h1>Edit Machine</h1>
+    <h3>Editing: @Html.DisplayFor(model => model.MachineName)</h3>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+        @Html.HiddenFor(model => model.MachineId)
+       
+        <label class="label">@Html.DisplayNameFor(model => model.MachineName)</label>
+        @Html.EditorFor(model => model.MachineName, new { @class = "form-control" })
+        <p class="text-danger font-weight-bold">@Html.ValidationMessageFor(model => model.MachineName)</p>
+      
+    
+        <label class="label">@Html.DisplayNameFor(model => model.ManufactureDate)</label>
+        @Html.EditorFor(model => model.ManufactureDate, new { @class = "form-control", @type = "date" })
+        <p class="text-danger font-weight-bold">@Html.ValidationMessageFor(model => model.ManufactureDate)</p>
+
+        <button type="submit" class="btn btn-success">Save</button>
+
+
+        <p>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId }, new { @class = "btn btn-danger" })</p>
+        <p>@Html.ActionLink("Back to All Machines", "Index", null, new { @class = "btn btn-secondary" })</p>
+
+}
