@@ -6,11 +6,23 @@ using Factory.Models;
 namespace Factory.Controllers
 {
     public class HomeController : Controller
-    {
+        {
+            private readonly FactoryContext _db;
+            public HomeController(FactoryContext db)
+            {
+                _db = db;
+            }
+
         [HttpGet("/")]
         public ActionResult Index()
         {
-            return View();
+            Machine[] machines = _db.Machines.ToArray();
+            Engineer[] engineers = _db.Engineers.ToArray();
+            Dictionary<string, object[]> model = new Dictionary<string, object[]>();
+            model.Add("Machines", machines);
+            model.Add("Engineers", engineers);
+
+            return View(model);
         }
     }
 }

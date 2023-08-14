@@ -2,7 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@using Factory.Models
+
+<h1>Welcome</h1>
+
+<h3>List of Engineers</h3>
+
+@if(Model["Engineers"].Length == 0)
+{
+    <p>No Engineer has been added</p>
+}
+<ul>
+
+    @foreach (Engineer engineer in Model["Engineers"])
+    {
+        <li id="engineer">@Html.ActionLink(@engineer.EngineerName, "Details", "Engineers", new { id = @engineer.EngineerId})</li>
+    }
+</ul>
+
+<h3>List of Machines</h3>
+
+@if(Model["Machines"].Length == 0)
+{
+    <p>No Machine has been added</p>
+}
+<ul>
+
+    @foreach (Machine machine in Model["Machines"])
+    {
+        <li id="machine">@Html.ActionLink(@machine.MachineName, "Details", "Machines", new { id = @machine.MachineId})</li>
+    }
+</ul>
