@@ -21,11 +21,10 @@ namespace Factory.Controllers
         }
         public ActionResult Create()
         {
-
             return View();
         }
 
-[HttpPost]
+        [HttpPost]
         public ActionResult Create(Engineer engineer)
         {
             _db.Engineers.Add(engineer);
@@ -81,7 +80,7 @@ namespace Factory.Controllers
             return View(thisEngineer);
         }
 
-         [HttpPost]
+        [HttpPost]
         public ActionResult AddMachine(Engineer engineer, int machineId)
         {  
             #nullable enable
